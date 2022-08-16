@@ -3,13 +3,9 @@ package br.com.prismo.account.domain.dto;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.databind.PropertyNamingStrategies;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
-import javax.validation.constraints.NotBlank;
+import java.math.BigDecimal;
 
 @ToString(callSuper = true)
 @AllArgsConstructor
@@ -18,9 +14,10 @@ import javax.validation.constraints.NotBlank;
 @Getter
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class AccountDTO {
+public class TransactionDTO {
 
-    @NotBlank
-    private String documentNumber;
+    private Long accountId;
+    private Long operationTypeId;
+    private BigDecimal amount;
 
 }

@@ -12,6 +12,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.PrePersist;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
@@ -31,10 +32,15 @@ public class Transaction {
     private Account account;
 
     @ManyToOne
-    private OperationsType operationsType;
+    private OperationsType operationType;
 
     private BigDecimal amount;
 
     private LocalDateTime eventDate;
+
+    @PrePersist
+    private void prePersist() {
+        eventDate = LocalDateTime.now();
+    }
 
 }
