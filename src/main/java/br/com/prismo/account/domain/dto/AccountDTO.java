@@ -1,5 +1,6 @@
-package br.com.prismo.account.domain;
+package br.com.prismo.account.domain.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.databind.PropertyNamingStrategies;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import lombok.AllArgsConstructor;
@@ -8,26 +9,20 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.validation.constraints.NotBlank;
 
 @ToString(callSuper = true)
 @AllArgsConstructor
 @NoArgsConstructor
 @Setter
 @Getter
-@Entity
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
-public class Account {
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class AccountDTO {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long accountId;
 
-    @Column(unique = true)
+    @NotBlank
     private String documentNumber;
 
 }

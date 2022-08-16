@@ -10,6 +10,8 @@ import lombok.ToString;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @ToString(callSuper = true)
@@ -22,6 +24,7 @@ import javax.persistence.Id;
 public class OperationsType {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long operationTypeId;
     @Column(length = 50)
     private String description;
