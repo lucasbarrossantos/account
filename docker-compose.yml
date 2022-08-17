@@ -1,0 +1,31 @@
+version: '3.9'
+
+services:
+  back-end:
+    container_name: account-api
+    restart: always
+    build: .
+    ports:
+      - "8080:8080"
+    links:
+      - dbpostgres
+    networks:
+      net-api:
+
+  dbpostgres:
+    restart: always
+    image: postgres:13.1
+    container_name: dbpostgres
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d/
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: pguser
+      POSTGRES_PASSWORD: pguser
+      POSTGRES_DB: dbaccount
+    networks:
+      net-api:
+
+networks:
+  net-api:

@@ -1,0 +1,16 @@
+# Details for our datasource
+spring:
+  datasource:
+    url: jdbc:postgresql://dbpostgres:5432/dbaccount?useSSL=false&serverTimezone=UTC
+    username: pguser
+    password: pguser
+
+# Hibernate properties
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQL94Dialect
+    hibernate:
+      # You can use: create, update, create-drop, none or validate
+      # You can see more here: https://stackoverflow.com/questions/42135114/how-does-spring-jpa-hibernate-ddl-auto-property-exactly-work-in-spring
+      ddl-auto: create
+    naming:
+      implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl
