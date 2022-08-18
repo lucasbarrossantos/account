@@ -13,7 +13,7 @@ spring:
     active: test
 ```
 
-Assim a aplicação utiliza como banco de dados o `H2`. Após a execução da aplicação é possível acessar o H2 por este [link](http://localhost:8080/api/h2)
+Assim a aplicação utilizará como banco de dados o `H2`. Após a execução da aplicação é possível acessar o H2 por este [link](http://localhost:8080/api/h2)
 
 ### Swagger
 - É possível também acessar o swagger [aqui](http://localhost:8080/api/swagger-ui/#/) após a execução da aplicação
