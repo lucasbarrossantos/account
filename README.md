@@ -30,3 +30,4 @@ Na raiz do projeto execute:
 - Lombok
 - Junit
 - Mockito
+- Swagger
