@@ -52,7 +52,7 @@ spring:
       ddl-auto: none
 ```
 
-### Tecnologias no projeto
+### Tecnologias utilizadas no projeto
 
 - Java 11
 - Maven
