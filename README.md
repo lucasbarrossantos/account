@@ -5,7 +5,10 @@
 ----
 
 Para teste local é possível mudar o profile para `test` no [`application.yml`](https://github.com/lucasbarrossantos/account/blob/main/src/main/resources/application.yml) 
-onde a aplicação utiliza como banco de dados o `H2`. É possível acessar o H2 por este [link](http://localhost:8080/api/h2)
+onde a aplicação utiliza como banco de dados o `H2`. Após a execução da aplicação é possível acessar o H2 por este [link](http://localhost:8080/api/h2)
+
+### Swagger
+- Acesse o swagger [aqui](http://localhost:8080/api/swagger-ui/#/)
 
 #### Caso queira executar a aplicação no ambiente Docker, basta seguir o passo abaixo:
 
