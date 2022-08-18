@@ -33,19 +33,19 @@ spring:
   profiles:
     active: docker-dev
 ```
+#### Com a aplicação rodando no docker o que muda agora é que o banco utilizado será o _PostgreSQL_
 
 **Obs:** O projeto usa um arquivo chamado [`import.sql`](https://github.com/lucasbarrossantos/account/blob/main/src/main/resources/import.sql) onde consta os dados iniciais para os tipos de operação. 
-Para esse script ser acionado é preciso ter a seguinte configuração no [`application.yml`](https://github.com/lucasbarrossantos/account/blob/main/src/main/resources/application.yml):
-``` yaml
+Para esse script ser acionado é preciso ter a seguinte configuração no `application-<profile>.yml` ativo:
+```yaml
 spring:
   jpa:
     hibernate:
       ddl-auto: create
 ```
-Essa configuração vai sempre chamar o [`import.sql`](https://github.com/lucasbarrossantos/account/blob/main/src/main/resources/import.sql) no momento do _start da aplicação_! Então para os dados permanecerem
-no banco mesmo após a próxima execução da aplicação, então basta deixar a configuração como está abaixo e executar a 
-aplicação novamente:
-``` yaml
+Essa configuração vai sempre chamar o [`import.sql`](https://github.com/lucasbarrossantos/account/blob/main/src/main/resources/import.sql) no momento do _start da aplicação_! 
+Então para que os dados possam permanecer no banco mesmo após a próxima execução da aplicação basta deixar a configuração como está abaixo e executá-la novamente:
+```yaml
 spring:
   jpa:
     hibernate:
