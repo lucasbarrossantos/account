@@ -47,3 +47,21 @@ spring:
 - Junit
 - Mockito
 - Swagger
+
+**Obs:** O projeto uma um arquivo chamado `import.sql` onde consta os dados iniciais para os tipos de operação. 
+Para esse script ser acionado é preciso ter a seguinte configuração no `application.yml`:
+``` yaml
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create
+```
+Essa configuração vai sempre chamar o `import.sql` no momento do _start da aplicação_! Então para os dados permanecerem
+no banco mesmo após a próxima execução da aplicação, então basta deixar a configuração como está abaixo e executar a 
+aplicação novamente:
+``` yaml
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: none
+```
