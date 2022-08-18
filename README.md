@@ -34,20 +34,6 @@ spring:
     active: docker-dev
 ```
 
-### Tecnologias no projeto
-
-- Java 11
-- Maven
-- Arquitetura MVC
-- Spring Boot(Spring Data, Validation, )
-- Banco de dados (H2, PostgreSQL)
-- Docker
-- Docker Compose
-- Lombok
-- Junit
-- Mockito
-- Swagger
-
 **Obs:** O projeto uma um arquivo chamado `import.sql` onde consta os dados iniciais para os tipos de operação. 
 Para esse script ser acionado é preciso ter a seguinte configuração no `application.yml`:
 ``` yaml
@@ -65,3 +51,17 @@ spring:
     hibernate:
       ddl-auto: none
 ```
+
+### Tecnologias no projeto
+
+- Java 11
+- Maven
+- Arquitetura MVC
+- Spring Boot(Spring Data, Validation, )
+- Banco de dados (H2, PostgreSQL)
+- Docker
+- Docker Compose
+- Lombok
+- Junit
+- Mockito
+- Swagger
