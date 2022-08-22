@@ -13,6 +13,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.math.BigDecimal;
 
 @ToString(callSuper = true)
 @AllArgsConstructor
@@ -29,5 +30,7 @@ public class Account {
 
     @Column(unique = true)
     private String documentNumber;
+
+    private BigDecimal availableCreditLimit;
 
 }

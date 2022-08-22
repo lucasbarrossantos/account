@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: docker-dev
+    active: test
   jpa:
     open-in-view: false
     show-sql: true

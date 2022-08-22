@@ -38,7 +38,7 @@ public class AccountServiceTest {
 
     @DisplayName("Must save an account successfully")
     @Test
-    void MustSaveAnAccountSuccessfully() {
+    void mustSaveAnAccountSuccessfully() {
         var accountDTO = mock.getAccountDTO();
         var account = mock.getAccount();
 
@@ -60,7 +60,7 @@ public class AccountServiceTest {
 
     @DisplayName("Must find an account successfully")
     @Test
-    void MustFindAnAccountSuccessfully() {
+    void mustFindAnAccountSuccessfully() {
         var accountId = 1L;
 
         var accountDTO = mock.getAccountDTO();

@@ -10,6 +10,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 import javax.validation.constraints.NotBlank;
+import java.math.BigDecimal;
 
 @ToString(callSuper = true)
 @AllArgsConstructor
@@ -22,5 +23,6 @@ public class AccountDTO {
 
     @NotBlank
     private String documentNumber;
+    private BigDecimal availableCreditLimit = new BigDecimal("5000");
 
 }

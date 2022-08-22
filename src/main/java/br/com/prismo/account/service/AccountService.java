@@ -37,7 +37,7 @@ public class AccountService {
         return mapperUtil.convertTo(account, AccountDTO.class);
     }
 
-    protected Account searchOrFail(Long accountId) {
+    public Account searchOrFail(Long accountId) {
         return accountRepository.findById(accountId)
                 .orElseThrow(() -> new EntityNotFoundException(
                         messageSource
