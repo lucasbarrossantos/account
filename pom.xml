@@ -10,6 +10,8 @@
 	</parent>
 	<groupId>br.com.prismo</groupId>
 	<artifactId>account</artifactId>
+	
+	
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>account</name>
